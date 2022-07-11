@@ -2,21 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Visual comparisons</title>
 </head>
 <body>
 
-<script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
-<div class="panel-body">
-  <p style="text-align:center"><b> Canon DSLR </b></p>
-  <figure>
-  <img-comparison-slider>
-    <img slot="first" src="img/1P0A0917_sharp.png" />
-    <img slot="second" src="img/1P0A0917_blur.png" />
-  </img-comparison-slider>
-  </figure>
-</div>
+  <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
+
+  <h1 style="text-align:center;">[NCHU Thesis] Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks</h1>
+  <h2 class="lead" style="text-align:center;">范植貿 (Chi-Mao Fan)</h2>
+  <h4 class="lead" style="text-align:center;">National Chung Hsing University</h4>
+
+  <div align="center">
+    <table>
+      <!-- Set 1 -->
+      <tr>
+        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on CBSD68</b></h1></td>
+      </tr>
+      <tr>
+        <td>
+          <img-comparison-slider>
+            <img slot="first" src="imgs/DN_2_result.png" width="1000"/>
+            <img slot="second" src="imgs/DN_2_noisy.png" width="1000"/>
+          </img-comparison-slider>
+        </td>
+        <td>
+            <img slot="first" src="imgs/DN_2_GT.png" width="1000"/>
+        </td>
+      </tr>
+      <tr>
+        <td><h1 align="center"><b>Input Degraded Image 👉 Output Restored Image</b></h1></td>
+        <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+      </tr>
+      <!-- Set 2 -->
+      <tr>
+        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
+      </tr>
+      <tr>
+        <td>
+          <img-comparison-slider>
+            <img slot="first" src="imgs/DN_1_result.png" width="1000"/>
+            <img slot="second" src="imgs/DN_1_noisy.png" width="1000"/>
+          </img-comparison-slider>
+        </td>
+        <td>
+            <img slot="first" src="imgs/DN_1_GT.png" width="1000"/>
+        </td>
+      </tr>
+      <tr>
+        <td><h1 align="center"><b>Input Degraded Image 👉 Output Restored Image</b></h1></td>
+        <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+      </tr>
+      <!-- Set 3 -->
+      <tr>
+        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
+      </tr>
+      <tr>
+        <td>
+          <img-comparison-slider>
+            <img slot="first" src="imgs/DN_3_result.png" width="1000"/>
+            <img slot="second" src="imgs/DN_3_noisy.png" width="1000"/>
+          </img-comparison-slider>
+        </td>
+        <td>
+            <img slot="first" src="imgs/DN_3_GT.png" width="1000"/>
+        </td>
+      </tr>
+      <tr>
+        <td><h1 align="center"><b>Input Degraded Image 👉 Output Restored Image</b></h1></td>
+        <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+      </tr>
+      <!-- Set 4 -->
+      <tr>
+        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
+      </tr>
+      <tr>
+        <td>
+          <img-comparison-slider>
+            <img slot="first" src="imgs/DN_4_result.png" width="1000"/>
+            <img slot="second" src="imgs/DN_4_noisy.png" width="1000"/>
+          </img-comparison-slider>
+        </td>
+        <td>
+            <img slot="first" src="imgs/DN_4_GT.png" width="1000"/>
+        </td>
+      </tr>
+      <tr>
+        <td><h1 align="center"><b>Input Degraded Image 👉 Output Restored Image</b></h1></td>
+        <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+      </tr>
+
+
+
+      
+    </table>
+
+
+  </div>
 
 
 </body>
