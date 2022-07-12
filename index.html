@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="https://i.imgur.com/m2rDOMa.jpg">
+    <link rel="National_Chung_Hsing_University_logo.ico">
     <title>Visual comparisons</title>
 </head>
 
@@ -142,7 +142,7 @@
     </div><br>
 
   <hr style="height:1px">
-    <div id=table2 align="center">
+    <div id=deblur_motionblur align="center">
       <table> <!-- Deblurring start-->
         <!-- GoPro -->
         <tr>
@@ -202,7 +202,7 @@
     </div><br>
 
   <hr style="height:1px">
-    <div id="table3" align="center">
+    <div id="derain_rainstreak" align="center">
       <table> <!-- Deraining start -->
         <!-- Rain100H -->
         <tr>
@@ -268,7 +268,7 @@
     </div><br>
 
   <hr style="height:1px">
-    <div id="table4" align="center">
+    <div id="derain_raindrop" align="center">
       <table> <!-- Deraining start -->
         <!-- RainDrop -->
         <tr>
@@ -298,8 +298,105 @@
         </tr>
       </table> <!-- Deraining end -->
     </div><br>
+
+  <hr style="height:1px">
+    <div id="dehaze_densehaze" align="center">
+      <table> <!-- Dehazing start -->
+        <!-- D-Haze -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Dehazing (Real-world Haze) on D-Haze</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/dehazing/DH_1_result.png" width="600"/>
+              <img slot="second" src="imgs/dehazing/DH_1_haze.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/dehazing/DH_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/dehazing/DH_2_result.png" width="600"/>
+              <img slot="second" src="imgs/dehazing/DH_2_haze.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/dehazing/DH_2_GT.png" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- D-Haze end -->
+    </div><br>
+
+  <hr style="height:1px">
+    <div id="ll_enhancement" align="center">
+      <table> <!-- Low-light enhancement start -->
+        <!-- LOL -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Low-light Image Enhancement (Real-world Low Light) on LOL</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/enhancement/LL_1_result.png" width="600"/>
+              <img slot="second" src="imgs/enhancement/LL_1_LL.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/enhancement/LL_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/enhancement/LL_2_result.png" width="600"/>
+              <img slot="second" src="imgs/enhancement/LL_2_LL.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/enhancement/LL_2_GT.png" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- Low-light enhancement end -->
+    </div><br>
+
+  <hr style="height:1px">
+    <div id="image_retouching" align="center">
+      <table> <!-- Image Retouching start -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Retouching (Real-world photo) on the Photos taken from me 👍</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/retouching/RT_1_output.png" width="600"/>
+              <img slot="second" src="imgs/retouching/RT_1_input.jpg" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td width="600">
+              <h1 align="center"><b>Ground Truth is not available</b></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/retouching/RT_2_output.png" width="600"/>
+              <img slot="second" src="imgs/retouching/RT_2_input.jpg" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <h1 align="center"><b>Ground Truth is not available</b></h1>
+          </td>
+        </tr>
+      </table> <!-- Image Retouching end -->
+    </div><br>
 </body>
 
+<hr style="height:1px">
+<br>
 <h3 style='text-align: center'>
   <a href='https://' target='_blank'>
     Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks
