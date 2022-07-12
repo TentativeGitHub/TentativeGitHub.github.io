@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Visual comparisons</title>
 </head>
-<body>
 
+<body>
   <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
+
   <div align="center">
     <h1 style="text-align:center;">[碩士論文] 利用可選擇性殘差塊在改良式階層編解碼器網路實現影像修復</h1>
     <h1 style="text-align:center;">[Thesis] Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks</h1>
@@ -16,285 +18,297 @@
         <h4 class="lead" style="text-align:center;">國立中興大學 (National Chung Hsing University)</h4>
   </div>
 
-<hr style="height:1px">
-  <div id=denoise_gaussian align="center">
-    <table> <!-- Denoising start -->
-      <tr>
-        <td><h1 align="center"><b>Degraded 👉 Restored</b></h1></td>
-        <td><h1 align="center"> <b>Ground Truth</b></h1></td>
-      </tr>
-      <!-- CBSD68 -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on CBSD68</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/DN_2_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/DN_2_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/DN_2_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/DN_1_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/DN_1_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/DN_1_GT.png" width="600"/>
-        </td>
-      </tr>
+  <hr style="height:1px">
+    <div id=denoise_gaussian align="center">
+      <table> <!-- Denoising start -->
+        <tr>
+          <td><h1 align="center"><b>Degraded 👉 Restored</b></h1></td>
+          <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+        </tr>
+        <!-- CBSD68 -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on CBSD68</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/DN_2_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/DN_2_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/DN_2_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/DN_1_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/DN_1_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/DN_1_GT.png" width="600"/>
+          </td>
+        </tr>
 
-      <!-- Kodak24 -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/DN_3_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/DN_3_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/DN_3_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/DN_4_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/DN_4_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/DN_4_GT.png" width="600"/>
-        </td>
-      </tr>
-    </table> <!-- Denoising end -->
-  </div><br>
+        <!-- Kodak24 -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/DN_3_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/DN_3_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/DN_3_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/DN_4_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/DN_4_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/DN_4_GT.png" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- Denoising end -->
+    </div><br>
 
-<hr style="height:1px">
-  <div id=denoise_realworld align="center">
-    <table> <!-- Deblurring start-->
-      <!-- SIDD -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on SIDD</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/RDN_1_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/RDN_1_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/RDN_1_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/RDN_2_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/RDN_2_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/denoising/RDN_2_GT.png" width="600"/>
-        </td>
-      </tr>
+  <hr style="height:1px">
+    <div id=denoise_realworld align="center">
+      <table> <!-- Deblurring start-->
+        <!-- SIDD -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on SIDD</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/RDN_1_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/RDN_1_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/RDN_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/RDN_2_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/RDN_2_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/denoising/RDN_2_GT.png" width="600"/>
+          </td>
+        </tr>
 
-      <!-- DND -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on DND</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/RDN_3_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/RDN_3_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <h1 align="center"><b>Ground Truth is not published</b></h1>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/denoising/RDN_4_result.png" width="600"/>
-            <img slot="second" src="imgs/denoising/RDN_4_noisy.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <h1 align="center"><b>Ground Truth is not published</b></h1>
-        </td>
-      </tr>
-    </table> <!-- Deblurring end -->
-  </div><br>
+        <!-- DND -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on DND</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/RDN_3_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/RDN_3_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <h1 align="center"><b>Ground Truth is not published</b></h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/denoising/RDN_4_result.png" width="600"/>
+              <img slot="second" src="imgs/denoising/RDN_4_noisy.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <h1 align="center"><b>Ground Truth is not published</b></h1>
+          </td>
+        </tr>
+      </table> <!-- Deblurring end -->
+    </div><br>
 
-<hr style="height:1px">
-  <div id=table2 align="center">
-    <table> <!-- Deblurring start-->
-      <!-- GoPro -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on GoPro</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deblurring/DB_1_result.png" width="600"/>
-            <img slot="second" src="imgs/deblurring/DB_1_blur.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deblurring/DB_1_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deblurring/DB_2_result.png" width="600"/>
-            <img slot="second" src="imgs/deblurring/DB_2_blur.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deblurring/DB_2_GT.png" width="600"/>
-        </td>
-      </tr>
+  <hr style="height:1px">
+    <div id=table2 align="center">
+      <table> <!-- Deblurring start-->
+        <!-- GoPro -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on GoPro</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deblurring/DB_1_result.png" width="600"/>
+              <img slot="second" src="imgs/deblurring/DB_1_blur.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deblurring/DB_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deblurring/DB_2_result.png" width="600"/>
+              <img slot="second" src="imgs/deblurring/DB_2_blur.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deblurring/DB_2_GT.png" width="600"/>
+          </td>
+        </tr>
 
 
-      <!-- HIDE -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on HIDE</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deblurring/DB_3_result.png" width="600"/>
-            <img slot="second" src="imgs/deblurring/DB_3_blur.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deblurring/DB_3_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deblurring/DB_4_result.png" width="600"/>
-            <img slot="second" src="imgs/deblurring/DB_4_blur.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deblurring/DB_4_GT.png" width="600"/>
-        </td>
-      </tr>
-    </table> <!-- Deblurring end -->
-  </div><br>
+        <!-- HIDE -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on HIDE</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deblurring/DB_3_result.png" width="600"/>
+              <img slot="second" src="imgs/deblurring/DB_3_blur.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deblurring/DB_3_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deblurring/DB_4_result.png" width="600"/>
+              <img slot="second" src="imgs/deblurring/DB_4_blur.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deblurring/DB_4_GT.png" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- Deblurring end -->
+    </div><br>
 
-<hr style="height:1px">
-  <div id="table3" align="center">
-    <table> <!-- Deraining start -->
-      <!-- Rain100H -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100H</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DR_1_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DR_1_rain.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DR_1_GT.png" width="600"/>
-        </td>
-      </tr>
-      <!-- Rain100L -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100L</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DR_2_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DR_2_rain.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DR_2_GT.png" width="600"/>
-        </td>
-      </tr>
-      <!-- Test100 -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test100</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DR_3_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DR_3_rain.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DR_3_GT.png" width="600"/>
-        </td>
-      </tr>
-      <!-- Test2800 -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test2800</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DR_4_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DR_4_rain.jpg" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DR_4_GT.jpg" width="600"/>
-        </td>
-      </tr>
-    </table> <!-- Deraining end -->
-  </div><br>
+  <hr style="height:1px">
+    <div id="table3" align="center">
+      <table> <!-- Deraining start -->
+        <!-- Rain100H -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100H</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DR_1_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DR_1_rain.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DR_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <!-- Rain100L -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100L</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DR_2_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DR_2_rain.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DR_2_GT.png" width="600"/>
+          </td>
+        </tr>
+        <!-- Test100 -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test100</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DR_3_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DR_3_rain.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DR_3_GT.png" width="600"/>
+          </td>
+        </tr>
+        <!-- Test2800 -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test2800</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DR_4_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DR_4_rain.jpg" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DR_4_GT.jpg" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- Deraining end -->
+    </div><br>
 
-<hr style="height:1px">
-  <div id="table4" align="center">
-    <table> <!-- Deraining start -->
-      <!-- RainDrop -->
-      <tr>
-        <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Real-world Raindrop) on RainDrop</b></h1></td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DRD_1_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DRD_1_rain.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DRD_1_GT.png" width="600"/>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <img-comparison-slider>
-            <img slot="first" src="imgs/deraining/DRD_2_result.png" width="600"/>
-            <img slot="second" src="imgs/deraining/DRD_2_rain.png" width="600"/>
-          </img-comparison-slider>
-        </td>
-        <td>
-            <img slot="first" src="imgs/deraining/DRD_2_GT.png" width="600"/>
-        </td>
-      </tr>
-    </table> <!-- Deraining end -->
-  </div><br>
-
+  <hr style="height:1px">
+    <div id="table4" align="center">
+      <table> <!-- Deraining start -->
+        <!-- RainDrop -->
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Real-world Raindrop) on RainDrop</b></h1></td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DRD_1_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DRD_1_rain.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DRD_1_GT.png" width="600"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img-comparison-slider>
+              <img slot="first" src="imgs/deraining/DRD_2_result.png" width="600"/>
+              <img slot="second" src="imgs/deraining/DRD_2_rain.png" width="600"/>
+            </img-comparison-slider>
+          </td>
+          <td>
+              <img slot="first" src="imgs/deraining/DRD_2_GT.png" width="600"/>
+          </td>
+        </tr>
+      </table> <!-- Deraining end -->
+    </div><br>
 </body>
+
+<h3 style='text-align: center'>
+  <a href='https://' target='_blank'>
+    Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks
+  </a>
+  |
+  <a href='https://github.com/FanChiMao/SRMNet-thesis' target='_blank'>Github Repo
+  </a>
+</h3>
+<center>
+  <img src='https://visitor-badge.glitch.me/badge?page_id=thesis_comparison_web' alt='visitor badge'>
+</center>
+
 </html>
