@@ -1,17 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/National_Chung_Hsing_University_logo.ico">
     <title>Visual comparisons</title>
+    <style>
+      table {
+        border-collapse: separate;
+        border-radius: 4px;
+        margin-left:auto;
+        margin-right:auto;
+        width:auto;
+      }
+      tr{
+        border: 3px solid #fff;
+      }
+      td{
+        border: 3px solid #fff;
+        background: #fff;
+        padding: 5px 10px;
+        color: black;
+      }
+      tr:first-child td:first-child{border-top-left-radius: 10px;}
+      tr:last-child td:first-child{border-bottom-left-radius: 10px;}
+      tr:first-child td:last-child{border-top-right-radius: 10px;}
+      tr:last-child td:last-child{border-bottom-right-radius: 10px;}
+      .degaussian{background-color: #D4A373;color: black;}
+      .denoise{background-color: #D8AB80;color: black;}
+      .deblur{background-color: #E7C8A0;color: black;}
+      .derainstreak{background-color: #FAEDCD;color: black;}
+      .deraindrop{background-color: #FCF4D7;color: black;}
+      .dehaze{background-color: #FEFAE0;color: black;}
+      .LL{background-color: #E9EDC9;color: black;}
+      .retouch{background-color: #CCD5AE;color: black;}
+    </style>
 </head>
 
-<body>
+<body bgcolor="#2e3a4d">
   <script defer src="https://unpkg.com/img-comparison-slider@7/dist/index.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/img-comparison-slider@7/dist/styles.css"/>
 
-  <div align="center">
+  <div align="center" style="color:#C7C3BE;">
     <h1 style="text-align:center;">[碩士論文] 利用可選擇性殘差塊在改良式階層編解碼器網路實現影像修復</h1>
     <h1 style="text-align:center;">[Thesis] Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks</h1>
       <h2 class="lead" style="text-align:center;">研究生: 范植貿 (Chi-Mao Fan)</h2>
@@ -19,27 +50,31 @@
         <h4 class="lead" style="text-align:center;">國立中興大學 (National Chung Hsing University)</h4>
   </div>
   <div align="center">
-    <a href="https://">
-      <img id="pdf" src="https://img.shields.io/badge/PDF-Paper-orange" height="25"/>
+    <a href="https://drive.google.com/file/d/1PKB0Mb02cmNcB5zCae_SYDbgPr4w86xy/view?usp=sharing">
+      <img id="pdf" src="https://img.shields.io/badge/PDF-Paper-brightgreen" height="25"/>
     </a>
-    <a href="https://docs.google.com/presentation/d/10l_7eXjjE90Vqb0ammYmlSlBo4rVRH3F/edit?usp=sharing&ouid=108348190349543369603&rtpof=true&sd=true">
+    <a href="https://docs.google.com/presentation/d/1XH-vriqz1nO6iXF_X0U-GbUvPZsVFNb4/edit?usp=sharing&ouid=108348190349543369603&rtpof=true&sd=true">
       <img id="slide" src="https://img.shields.io/badge/Presentation-Slides-B762C1" height="25"/>
+    </a>
+    <a href="https://github.com/FanChiMao/SRMNet-thesis">
+      <img id="github" src="https://img.shields.io/badge/Website-GitHub-orange" height="25"/>
     </a>
     <a href="https://huggingface.co/spaces/52Hz/SRMNet_thesis">
       <img id="hugginghace" src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue" height="25"/>
     </a>
-  </div>
-    
-  <hr style="height:1px">
-    <div id=denoise_gaussian align="center">
+  </div><br>
+
+<hr style="height:1px">
+<br>
+
+  <div id=denoise_gaussian align="center">
       <table> <!-- Denoising start -->
         <tr>
-          <td><h1 align="center"><b>Degraded 👉 Restored</b></h1></td>
-          <td><h1 align="center"> <b>Ground Truth</b></h1></td>
+          <td class="degaussian" colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise)</b></h1></td>
         </tr>
         <!-- CBSD68 -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on CBSD68</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>CBSD68 dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -66,7 +101,7 @@
 
         <!-- Kodak24 -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Synthesized Gaussian Noise) on Kodak24</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>Kodak24 dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -91,14 +126,16 @@
           </td>
         </tr>
       </table> <!-- Denoising end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id=denoise_realworld align="center">
+  <div id=denoise_realworld align="center">
       <table> <!-- Deblurring start-->
         <!-- SIDD -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on SIDD</b></h1></td>
+          <td class="denoise" colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>SIDD dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -125,7 +162,7 @@
 
         <!-- DND -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Denoising (Real-world Noise) on DND</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>DND dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -150,14 +187,16 @@
           </td>
         </tr>
       </table> <!-- Deblurring end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id=deblur_motionblur align="center">
+  <div id=deblur_motionblur align="center">
       <table> <!-- Deblurring start-->
         <!-- GoPro -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on GoPro</b></h1></td>
+          <td class="deblur" colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>GoPro dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -182,10 +221,9 @@
           </td>
         </tr>
 
-
         <!-- HIDE -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deblurring (Synthesized Motion Blur) on HIDE</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>HIDE dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -210,14 +248,16 @@
           </td>
         </tr>
       </table> <!-- Deblurring end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id="derain_rainstreak" align="center">
+  <div id="derain_rainstreak" align="center">
       <table> <!-- Deraining start -->
         <!-- Rain100H -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100H</b></h1></td>
+          <td class="derainstreak" colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Rain100H dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -232,7 +272,7 @@
         </tr>
         <!-- Rain100L -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Rain100L</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>Rain100L dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -247,7 +287,7 @@
         </tr>
         <!-- Test100 -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test100</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>Test100 dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -262,7 +302,7 @@
         </tr>
         <!-- Test2800 -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Synthesized Rainstreak) on Test2800</b></h1></td>
+          <td colspan="2"><h1 style="text-align:center;"><b>Test2800 dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -276,14 +316,16 @@
           </td>
         </tr>
       </table> <!-- Deraining end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id="derain_raindrop" align="center">
+  <div id="derain_raindrop" align="center">
       <table> <!-- Deraining start -->
         <!-- RainDrop -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Real-world Raindrop) on RainDrop</b></h1></td>
+          <td class="deraindrop" colspan="2"><h1 style="text-align:center;"><b>Image Deraining (Real-world Raindrop)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>RainDrop dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -308,14 +350,16 @@
           </td>
         </tr>
       </table> <!-- Deraining end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id="dehaze_densehaze" align="center">
+  <div id="dehaze_densehaze" align="center">
       <table> <!-- Dehazing start -->
         <!-- D-Haze -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Dehazing (Real-world Haze) on D-Haze</b></h1></td>
+          <td class="dehaze" colspan="2"><h1 style="text-align:center;"><b>Image Dehazing (Real-world Haze)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>D-Haze dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -340,14 +384,16 @@
           </td>
         </tr>
       </table> <!-- D-Haze end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id="ll_enhancement" align="center">
+  <div id="ll_enhancement" align="center">
       <table> <!-- Low-light enhancement start -->
         <!-- LOL -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Low-light Image Enhancement (Real-world Low Light) on LOL</b></h1></td>
+          <td class="LL" colspan="2"><h1 style="text-align:center;"><b>Low-light Image Enhancement (Real-world Low Light)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>LOL dataset</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -372,13 +418,15 @@
           </td>
         </tr>
       </table> <!-- Low-light enhancement end -->
-    </div><br>
+    </div><br><br>
 
-  <hr style="height:1px">
-    <div id="image_retouching" align="center">
+  <div id="image_retouching" align="center">
       <table> <!-- Image Retouching start -->
         <tr>
-          <td colspan="2"><h1 style="text-align:center;"><b>Image Retouching (Real-world photo) on the Photos taken from me 👍</b></h1></td>
+          <td class="retouch" colspan="2"><h1 style="text-align:center;"><b>Image Retouching (Real-world photo)</b></h1></td>
+        </tr>
+        <tr>
+          <td colspan="2"><h1 style="text-align:center;"><b>Photos taken from me 👍</b></h1></td>
         </tr>
         <tr>
           <td>
@@ -403,17 +451,18 @@
           </td>
         </tr>
       </table> <!-- Image Retouching end -->
-    </div><br>
+    </div><br><br>
+
 </body>
 
 <hr style="height:1px">
 <br>
 <h3 style='text-align: center'>
-  <a href='https://' target='_blank'>
+  <a href='https://drive.google.com/file/d/1PKB0Mb02cmNcB5zCae_SYDbgPr4w86xy/view?usp=sharing' target='_blank' style="color:white;">
     Image Restoration Using Improved Hierarchical Encoder-Decoder Networks with Selective Residual Blocks
   </a>
   |
-  <a href='https://github.com/FanChiMao/SRMNet-thesis' target='_blank'>Github Repo
+  <a href='https://github.com/FanChiMao/SRMNet-thesis' target='_blank' style="color:white;">Github Repo
   </a>
 </h3>
 <center>
